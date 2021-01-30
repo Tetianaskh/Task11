@@ -31,7 +31,7 @@ public class Task11 {
         Scanner sc = new Scanner(System.in);
         outputMenu(menu);
         int answerResponse = sc.nextInt();
-        while (answerResponse != 6 || answerResponse < 1) {
+        while (answerResponse < 6 || answerResponse < 1) {
             if (sc.nextInt() == 1) {
 
                 outputMenu(menu);
