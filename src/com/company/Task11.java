@@ -35,30 +35,21 @@ public class Task11 {
             if (sc.nextInt() == 1) {
 
                 outputMenu(menu);
-                answerResponse = sc.nextInt();
             } else if (sc.nextInt() == 2) {
 
                 outputMenu(menu);
-                answerResponse = sc.nextInt();
             } else if (sc.nextInt() == 3) {
 
                 outputMenu(menu);
-                answerResponse = sc.nextInt();
             } else if (sc.nextInt() == 4) {
 
                 outputMenu(menu);
-                answerResponse = sc.nextInt();
             } else if (sc.nextInt() == 5) {
 
                 outputMenu(menu);
-                answerResponse = sc.nextInt();
             } else {
                 System.out.println("Работа завершена! Всего доброго!");
             }
-
-
-
-
 
         }
 
