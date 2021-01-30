@@ -29,12 +29,10 @@ public class Task11 {
         String[] menu = {"Добавить человека", "Вывести список", "Удалить человека по номеру",
                 "Найти человека (людей) по фамилии", "Найти человека по имени", "Завершить работу"};
         Scanner sc = new Scanner(System.in);
+        HumanService hs = new HumanService();
         while (true) {
             outputMenu(menu);
             int answer = sc.nextInt();
-            if (answer == 6) {
-                break;
-            }
             if (answer == 1) {
 
             } else if (answer == 2) {
@@ -45,6 +43,8 @@ public class Task11 {
 
             } else if (answer == 5) {
 
+            } else if (answer == 6) {
+                break;
             }
         }
         System.out.println("Работа завершена! Всего доброго!");
