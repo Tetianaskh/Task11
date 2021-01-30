@@ -40,9 +40,9 @@ public class Task11 {
             } else if (answer == 3) {
                 hs.deleteHuman();
             } else if (answer == 4) {
-                hs.findHumanForSurname();
+                hs.findHumanBySurname();
             } else if (answer == 5) {
-                hs.findHumanForName();
+                hs.findHumanByName();
             } else if (answer == 6) {
                 break;
             }

@@ -20,11 +20,11 @@ public class HumanService {
         System.out.println("deleteHuman");
     }
 
-    public void findHumanForSurname() {
+    public void findHumanBySurname() {
         System.out.println("findHumanForSurname");
     }
 
-    public void findHumanForName() {
+    public void findHumanByName() {
         System.out.println("findHumanForName");
     }
 }
