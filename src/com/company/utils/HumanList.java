@@ -1,4 +1,6 @@
-package com.company;
+package com.company.utils;
+
+import com.company.humans.Human;
 
 import java.util.Arrays;
 

@@ -1,4 +1,7 @@
-package com.company;
+package com.company.services;
+
+import com.company.humans.Human;
+import com.company.utils.HumanList;
 
 import java.util.Scanner;
 
