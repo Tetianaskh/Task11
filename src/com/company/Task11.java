@@ -1,8 +1,16 @@
 package com.company;
 
-import com.company.*;
+
+import java.util.Scanner;
 
 public class Task11 {
+
+    private static void outputMenu(String[] menu) {
+        System.out.println("Какое действие Вы хотите совершить?");
+        for (int i = 0; i < menu.length; i++) {
+            System.out.println(i + 1 + ". " + menu[i]);
+        }
+    }
 
     /**
      * Написать класс Human (фамилия, имя, отчество),
@@ -17,11 +25,36 @@ public class Task11 {
      * найти человека по имени
      */
     public static void main(String[] args) {
-        Human[] humans = HumanList;
+        String[] menu = {"Добавить человека", "Вывести список", "Удалить человека по номеру",
+                "Найти человека (людей) по фамилии", "Найти человека по имени", "Завершить работу"};
+        Scanner sc = new Scanner(System.in);
+        int answerResponse = sc.nextInt();
+        while (answerResponse != 6 || answerResponse < 1) {
+            System.out.println("Добрый день!");
+            outputMenu(menu);
+            if (sc.nextInt() == 1) {
 
-        for (Human human : humans) {
-            System.out.println(human.toString());
+                outputMenu(menu);
+            } else if (sc.nextInt() == 2) {
+
+                outputMenu(menu);
+            } else if (sc.nextInt() == 3) {
+
+                outputMenu(menu);
+            } else if (sc.nextInt() == 4) {
+
+                outputMenu(menu);
+            } else if (sc.nextInt() == 5) {
+
+                outputMenu(menu);
+            }
+
+
+
+
+
         }
+
 
     }
 }
