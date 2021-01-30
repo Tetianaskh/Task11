@@ -27,23 +27,23 @@ public class Task11 {
      */
     public static void main(String[] args) {
         String[] menu = {"Добавить человека", "Вывести список", "Удалить человека по номеру",
-                "Найти человека (людей) по фамилии", "Найти человека по имени", "Завершить работу"};
+                "Найти человека (людей) по фамилии", "Найти человека (людей) по имени", "Завершить работу"};
         Scanner sc = new Scanner(System.in);
         HumanService hs = new HumanService();
         while (true) {
             outputMenu(menu);
-            int answer = sc.nextInt();
-            if (answer == 1) {
+            String answer = sc.nextLine();
+            if (answer.equals("1")) {
                 hs.addHuman();
-            } else if (answer == 2) {
+            } else if (answer.equals("2")) {
                 hs.printHumanList();
-            } else if (answer == 3) {
+            } else if (answer.equals("3")) {
                 hs.deleteHuman();
-            } else if (answer == 4) {
+            } else if (answer.equals("4")) {
                 hs.findHumanBySurname();
-            } else if (answer == 5) {
+            } else if (answer.equals("5")) {
                 hs.findHumanByName();
-            } else if (answer == 6) {
+            } else if (answer.equals("6")) {
                 break;
             }
         }

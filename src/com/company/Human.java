@@ -1,15 +1,16 @@
 package com.company;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 /**
  * Написать класс Human (фамилия, имя, отчество),
  * переопределять в нем методы equals, hashCode, toString
  */
 public class Human {
-    private String surname;
-    private String name;
-    private String patronymic;
+    private final String surname;
+    private final String name;
+    private final String patronymic;
 
     public Human(String surname, String name, String patronymic) {
         this.surname = surname;
@@ -17,16 +18,34 @@ public class Human {
         this.patronymic = patronymic;
     }
 
-//    public String equals() {
-//
-//    }
-//
-//    public  hashCode() {
-//
-//    }
-//
-//    public String toString() {
-//        return surname + " " + name + " " + patronymic;
-//    }
-    
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Human human = (Human) o;
+        return surname.equalsIgnoreCase(human.surname) &&
+                name.equalsIgnoreCase(human.name) &&
+                patronymic.equalsIgnoreCase(human.patronymic);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(surname.toLowerCase(), name.toLowerCase(), patronymic.toLowerCase());
+    }
+
+    public String toString() {
+        return surname + " " + name + " " + patronymic;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getPatronymic() {
+        return patronymic;
+    }
 }
