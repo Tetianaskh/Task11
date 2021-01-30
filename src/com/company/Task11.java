@@ -29,30 +29,24 @@ public class Task11 {
         String[] menu = {"Добавить человека", "Вывести список", "Удалить человека по номеру",
                 "Найти человека (людей) по фамилии", "Найти человека по имени", "Завершить работу"};
         Scanner sc = new Scanner(System.in);
-        outputMenu(menu);
-        int answerResponse = sc.nextInt();
-        while (answerResponse < 6) {
-            if (sc.nextInt() == 1) {
-
-                outputMenu(menu);
-            } else if (sc.nextInt() == 2) {
-
-                outputMenu(menu);
-            } else if (sc.nextInt() == 3) {
-
-                outputMenu(menu);
-            } else if (sc.nextInt() == 4) {
-
-                outputMenu(menu);
-            } else if (sc.nextInt() == 5) {
-
-                outputMenu(menu);
-            } else {
-                System.out.println("Работа завершена! Всего доброго!");
+        while (true) {
+            outputMenu(menu);
+            int answer = sc.nextInt();
+            if (answer == 6) {
+                break;
             }
+            if (answer == 1) {
 
+            } else if (answer == 2) {
+
+            } else if (answer == 3) {
+
+            } else if (answer == 4) {
+
+            } else if (answer == 5) {
+
+            }
         }
-
-
+        System.out.println("Работа завершена! Всего доброго!");
     }
 }
