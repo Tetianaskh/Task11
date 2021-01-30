@@ -34,15 +34,15 @@ public class Task11 {
             outputMenu(menu);
             int answer = sc.nextInt();
             if (answer == 1) {
-
+                hs.addHuman();
             } else if (answer == 2) {
-
+                hs.printHumanList();
             } else if (answer == 3) {
-
+                hs.deleteHuman();
             } else if (answer == 4) {
-
+                hs.findHumanForSurname();
             } else if (answer == 5) {
-
+                hs.findHumanForName();
             } else if (answer == 6) {
                 break;
             }

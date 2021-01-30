@@ -8,12 +8,23 @@ import java.util.Arrays;
 public class HumanService {
 //    private Human[] humans = new Human[0];
 //
-//    public void add(Human human) {
-//        humans = Arrays.copyOf(humans, humans.length + 1);
-//        humans[humans.length - 1] = human;
-//    }
-//
-//    public void delete(Human human) {
-//        humans = removeArrayElement(humans, deleteTaskNumber - 1);
-//    }
+    public void addHuman() {
+        System.out.println("addHuman");
+    }
+
+    public void printHumanList() {
+        System.out.println("printHumanList");
+    }
+
+    public void deleteHuman() {
+        System.out.println("deleteHuman");
+    }
+
+    public void findHumanForSurname() {
+        System.out.println("findHumanForSurname");
+    }
+
+    public void findHumanForName() {
+        System.out.println("findHumanForName");
+    }
 }

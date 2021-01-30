@@ -25,8 +25,8 @@ public class Human {
 //
 //    }
 //
-    public String toString() {
-        return surname + " " + name + " " + patronymic;
-    }
+//    public String toString() {
+//        return surname + " " + name + " " + patronymic;
+//    }
     
 }
