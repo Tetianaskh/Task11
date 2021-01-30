@@ -32,6 +32,7 @@ public class Human {
         return Objects.hash(surname.toLowerCase(), name.toLowerCase(), patronymic.toLowerCase());
     }
 
+    @Override
     public String toString() {
         return surname + " " + name + " " + patronymic;
     }
