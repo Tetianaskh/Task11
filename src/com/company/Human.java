@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Arrays;
+
 /**
  * Написать класс Human (фамилия, имя, отчество),
  * переопределять в нем методы equals, hashCode, toString
@@ -15,5 +17,16 @@ public class Human {
         this.patronymic = patronymic;
     }
 
+//    public String equals() {
+//
+//    }
+//
+//    public  hashCode() {
+//
+//    }
+//
+    public String toString() {
+        return surname + " " + name + " " + patronymic;
+    }
     
 }

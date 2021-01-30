@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.*;
+
 public class Task11 {
 
     /**
@@ -15,13 +17,11 @@ public class Task11 {
      * найти человека по имени
      */
     public static void main(String[] args) {
-        Human[] humans = {
-                new Human("Иванов", "Петр", "Васильевич"),
-                new Human("Петров", "Кирилл", "Олегович"),
-                new Human("Васильев", "Андрей", "Павлович"),
-                new Human("Яворюк", "Олег", "Витальевич"),
-                new Human("Семянюк", "Валентин", "Константинович")
+        Human[] humans = HumanList;
 
-        };
+        for (Human human : humans) {
+            System.out.println(human.toString());
+        }
+
     }
 }
