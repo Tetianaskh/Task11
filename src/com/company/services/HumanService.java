@@ -1,61 +1,37 @@
 package com.company.services;
 
+import com.company.exception.HumanAlreadyExistsException;
 import com.company.humans.Human;
 import com.company.utils.HumanList;
-
-import java.util.Scanner;
 
 /**
  * Написать класс HumanService (сервис по работе с людьми)
  */
 public class HumanService {
-    private static final Scanner sc = new Scanner(System.in);
     private final HumanList humanList = new HumanList();
 
-    public void addHuman() {
-        System.out.println("Введите, пожалуйста, фамилию:");
-        String surname = sc.nextLine();
-        System.out.println("Введите, пожалуйста, имя:");
-        String name = sc.nextLine();
-        System.out.println("Введите, пожалуйста, отчество:");
-        String patronymic = sc.nextLine();
+    public void addHuman(String surname, String name, String patronymic) {
         Human human = new Human(surname, name, patronymic);
         if (humanList.contains(human)) {
-            System.out.println("Такой человек в списке уже есть!");
-            System.out.println();
+            throw new HumanAlreadyExistsException("Такой человек в списке уже есть!");
         } else {
             humanList.add(human);
-            System.out.println();
         }
     }
 
-    public void printHumanList() {
-        System.out.println("Список людей:");
-        humanList.print();
-        System.out.println();
+    public String[] printHumanList() {
+       return humanList.getAsStringArray();
     }
 
-    public void deleteHuman() {
-        System.out.println("Введите, пожалуйста, номер человека которого хотите удалить из списка:");
-        int number = Integer.parseInt(sc.nextLine());
+    public void deleteHuman(int number) {
         humanList.delete(number - 1);
     }
 
-    public void findHumanBySurname() {
-        System.out.println("Введите, пожалуйста, Фамилию человека (людей) которого хотите найти в списке:");
-        String surname = sc.nextLine();
-        HumanList results = humanList.filterBySurname(surname);
-        System.out.println("Результаты поиска по Фамилии:");
-        results.print();
-        System.out.println();
+    public HumanList findHumanBySurname(String surname) {
+        return humanList.filterBySurname(surname);
     }
 
-    public void findHumanByName() {
-        System.out.println("Введите, пожалуйста, Имя человека (людей) которого хотите найти в списке:");
-        String name = sc.nextLine();
-        HumanList results = humanList.filterByName(name);
-        System.out.println("Результаты поиска по Имени:");
-        results.print();
-        System.out.println();
+    public HumanList findHumanByName(String name) {
+        return humanList.filterByName(name);
     }
 }

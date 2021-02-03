@@ -27,11 +27,12 @@ private Human[] humans = new Human[0];
         humans[humans.length - 1] = human;
     }
 
-    public void print() {
+    public String[] getAsStringArray() {
+        String[] res = new String[humans.length];
         for (int i = 0; i < humans.length; i++) {
-            Human human = humans[i];
-            System.out.println((i + 1) + ". " + human);
+            res[i] = (i + 1) + ". " + humans[i];
         }
+        return res;
     }
 
     public void delete(int index) {
