@@ -3,8 +3,6 @@ package com.company;
 import com.company.services.HumanService;
 import com.company.ui.ConsoleApp;
 
-import java.util.Scanner;
-
 public class Task11 {
 
 

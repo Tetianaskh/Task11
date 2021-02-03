@@ -1,6 +1,7 @@
 package com.company.ui;
 
-import com.company.exception.HumanAlreadyExistsException;
+import com.company.Result;
+import com.company.ResultType;
 import com.company.services.HumanService;
 import com.company.utils.HumanList;
 
@@ -52,10 +53,9 @@ public class ConsoleApp {
         System.out.println("Введите, пожалуйста, отчество:");
         String patronymic = sc.nextLine();
 
-        try {
-            humanService.addHuman(surname, name, patronymic);
-        } catch (HumanAlreadyExistsException e) {
-            System.out.println(e.getMessage());
+        Result res = humanService.addHuman(surname, name, patronymic);
+        if (res.getResultType() == ResultType.Error) {
+            System.out.println(res.getErrorMessage());
             System.out.println();
         }
     }
@@ -71,7 +71,9 @@ public class ConsoleApp {
         String surname = sc.nextLine();
         HumanList results = humanService.findHumanBySurname(surname);
         System.out.println("Результаты поиска по Фамилии:");
-        results.getAsStringArray();
+        for (String h : results.getAsStringArray()) {
+            System.out.println(h);
+        }
         System.out.println();
     }
 
@@ -80,7 +82,9 @@ public class ConsoleApp {
         String name = sc.nextLine();
         HumanList results = humanService.findHumanByName(name);
         System.out.println("Результаты поиска по Имени:");
-        results.getAsStringArray();
+        for (String h : results.getAsStringArray()) {
+            System.out.println(h);
+        }
         System.out.println();
     }
 
